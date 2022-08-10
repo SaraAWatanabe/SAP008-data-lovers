@@ -2,11 +2,28 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
+    <title>Pokémon Lovers</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root"></div>
+    <h1>Pokémon Lovers</h1>
+      <fieldset>
+        <legend>Select a region:</legend>
+    <div>
+      <input type="radio" id="radioWorld">
+          <label for="radioWorld">World</label>
+    </div>
+    <div>
+      <input type="radio" id="radioKanto">
+          <label for="radioKanto">Kanto</label>
+    </div>
+    <div>
+      <input type="radio" id="radioJohto">
+          <label for="radioJohto">Johto</label>
+    </div>
+      </fieldset>  
+    <output id="cards">
+    </output>
     <script src="main.js" type="module"></script>
   </body>
 </html>
