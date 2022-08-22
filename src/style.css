@@ -69,12 +69,10 @@ body{
     width: 25%;
     height: 568px;
     left: 17px;
-    /*margin-top: 10%;*/
     background: yellow;
     border-radius: 31px;
     padding: 10px;
     margin: 2%;
-    /*margin-top: 10%;*/
     box-shadow: inset 0 0 2em rgb(159, 74, 149);
 }
 

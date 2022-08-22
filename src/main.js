@@ -3,7 +3,7 @@ import data from "./data/pokemon/pokemon.js";
 
 //.log(example, data);
 
-const btnMain = document.getElementById("button-main");
+//const btnMain = document.getElementById("button-main");
 const btnWorld = document.getElementById("button-world");
 const btnKanto = document.getElementById("button-kanto");
 const btnJohto = document.getElementById("button-johto");
@@ -57,8 +57,6 @@ const createCards = listPokemon => {
     `)
     return infoPokemon.join(" ")
 }
-
-
 
 //Botão Região kanto//
 btnKanto.addEventListener("click", function () {
