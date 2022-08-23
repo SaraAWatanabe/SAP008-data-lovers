@@ -63,13 +63,12 @@ const createCards = listPokemon => {
             return infoPokemon.join(" ")
         }
 
-        let pokemonsToBeShow= []
-//Botão Região kanto//
+   //Botão Região kanto//
 btnKanto.addEventListener("click", function () {
     let result = filterByRegion(everyPokemon, "kanto")
     let infoKanto = createCards(result)
     cards.innerHTML = infoKanto
-    pokemonsToBeShow = infoKanto
+    pokemonsToBeShown = result
     console.log(infoKanto)
 });
 
@@ -78,7 +77,7 @@ btnJohto.addEventListener("click", function () {
     let result = filterByRegion(everyPokemon, "johto")
     let infoJohto = createCards(result)
     cards.innerHTML = infoJohto;
-    pokemonsToBeShow = infoJohto
+    pokemonsToBeShown = result
     console.log(infoJohto)
 });
 
@@ -86,15 +85,18 @@ btnJohto.addEventListener("click", function () {
 btnWorld.addEventListener("click", function () {
     let infoPokemons = createCards(everyPokemon)
     cards.innerHTML = infoPokemons
-    pokemonsToBeShow= infoPokemons 
+    pokemonsToBeShown= infoPokemons
 });
 
+let pokemonsToBeShown= []
 select.addEventListener("change", function(){
-    let result = filterByType(pokemonsToBeShow,"grass")
-    let pokeGrass = createCards(result)
-    cards.innerHTML = pokeGrass;
-    console.log (pokeGrass)
-})
+    let type = select.value
+    let result = filterByType(pokemonsToBeShown,type)
+    let pokeType = createCards(result)
+    cards.innerHTML = pokeType;
+    console.log (type);
+
+});
 
 selectOrder.addEventListener("change", function(){
     let orderCpHp = selectOrder.value
