@@ -1,6 +1,6 @@
 import { filterByRegion } from "./data.js";
 import { filterByType } from "./data.js";
-//import { sortBy } from "./data.js";
+import { sortBy } from "./data.js";
 import data from "./data/pokemon/pokemon.js";
 
 //.log(example, data);
@@ -12,7 +12,7 @@ const btnJohto = document.getElementById("button-johto");
 const cards = document.getElementById("cards");
 const everyPokemon = data.pokemon;
 const select = document.getElementById("selectType");
-//let selectOrder = document.getElementById("select-cp");
+let selectOrder = document.getElementById("select-cp");
 
 
 //templates dos cards//
@@ -63,7 +63,8 @@ const createCards = listPokemon => {
             return infoPokemon.join(" ")
         }
 
-   //Botão Região kanto//
+
+//Botão Região kanto//
 btnKanto.addEventListener("click", function () {
     let result = filterByRegion(everyPokemon, "kanto")
     let infoKanto = createCards(result)
@@ -98,13 +99,12 @@ select.addEventListener("change", function(){
 
 });
 
-//selectOrder.addEventListener("change", function(){
-    //let orderCpHp = selectOrder.value
-    //console.log(orderCpHp)
-    //let result = sortBy(everyPokemon, orderCpHp)
-    //let pokeCpHp = createCards(result)
-    //cards.innerHTML = pokeCpHp;
-    //console.log(orderCpHp)
-    //console.log(result)
-//})
+selectOrder.addEventListener("change", function(){
+    let maxCp = selectOrder.value
+    console.log(maxCp)
+    let result = sortBy(everyPokemon, maxCp)
+    let pokeCpHp = createCards(result)
+    cards.innerHTML = pokeCpHp;
+    console.log(result)
+})
 
