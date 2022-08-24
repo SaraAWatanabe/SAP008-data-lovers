@@ -10,11 +10,11 @@ export const calcPercentage = (pokemonsLength, typeLength) =>
 export const sortBy = (pokemons, value) => {
   console.log(pokemons, value)
   return pokemons.sort((a, b) => {
-    if (value == "max-cp-biggest") {
-      return a.stats["max-cp"] - b.stats["max-cp"];
-    }
-    if (value == "max-cp-smallest") {
+    if (value == "biggest-max-cp") {
       return b.stats["max-cp"] - a.stats["max-cp"];
+    }
+    if (value == "smallest-max-cp") {
+      return a.stats["max-cp"] - b.stats["max-cp"];
     }
 
     return 0;

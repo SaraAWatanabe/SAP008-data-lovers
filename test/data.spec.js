@@ -8,7 +8,7 @@ const mockPokemons = [
       name: "kanto",
     }
   },
-  {     
+  {
     generation: {
       num: "generation ii",
       name: "johto",
@@ -49,75 +49,75 @@ describe("filterByRegion", () => {
   })
 });
 
-// Filtro por Type//
+Filtro por Type//
 
-// const mockType = [
-//   {
-//     type: [
-//       "grass",
-//       "poison",
-//     ]
-//   },
-//   {     
-//     type: [
-//       "normal",
-//     ]
-//   },
-//   {     
-//     type: [
-//       "fire"
-//     ]
-//   },
-// ];
+const mockType = [
+  {
+    type: [
+      "grass",
+      "poison",
+    ]
+  },
+  {
+    type: [
+      "normal",
+    ]
+  },
+  {
+    type: [
+      "fire"
+    ]
+  },
+];
 
-// describe("filterByType", () => {
-//   it("is a function", () => {
-//     expect(typeof filterByType).toBe("function");
-//   });
+describe("filterByType", () => {
+  it("is a function", () => {
+    expect(typeof filterByType).toBe("function");
+  });
 
-//   it("returns a new array, filtered by type grass", () => {
-//     const result = filterByType(mockType, "grass");
-//     const expected = [
-//       {
-//         type: [
-//           "grass",
-//           "poison",
-//         ]
-//       },
-//     ];
+  it("returns a new array, filtered by type grass", () => {
+    const result = filterByType(mockType, "grass");
+    const expected = [
+      {
+        type: [
+          "grass",
+          "poison",
+        ]
+      },
+    ];
 
-//     expect(result).toEqual(expected);
-//   });
+    expect(result).toEqual(expected);
+  });
 
-//   it("returns a new array, filtered by type fire", () => {
-//     const result = filterByType(mockType, "fire");
-//     const expected = [
-//       {
-//         type: [
-//           "fire",
-//         ]
-//       },
-//     ];
+  it("returns a new array, filtered by type fire", () => {
+    const result = filterByType(mockType, "fire");
+    const expected = [
+      {
+        type: [
+          "fire",
+        ]
+      },
+    ];
 
-//     expect(result).toEqual(expected);
-//   });
+    expect(result).toEqual(expected);
+  });
 
-//   it("returns a new array, filtered by type normal", () => {
-//     const result = filterByType(mockType, "normal");
-//     const expected = [
-//       {
-//         type: [
-//           "normal"
-//         ]
-//       },
-//     ];
+  it("returns a new array, filtered by type normal", () => {
+    const result = filterByType(mockType, "normal");
+    const expected = [
+      {
+        type: [
+          "normal"
+        ]
+      },
+    ];
 
-//     expect(result).toEqual(expected);
-//   });
+    expect(result).toEqual(expected);
+  });
 
 
 
-// });
+});
 
 
 

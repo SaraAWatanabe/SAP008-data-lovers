@@ -1,4 +1,4 @@
-import {filterByRegion } from "./data.js";
+import { filterByRegion } from "./data.js";
 import { filterByType } from "./data.js";
 import { sortBy } from "./data.js";
 import { calcPercentage } from "./data.js";
@@ -19,8 +19,8 @@ const statsType = document.getElementById("statsType")
 //templates dos cards//
 const createCards = listPokemon => {
     let infoPokemon = listPokemon.map((pokemon) =>
-    
-    `<div class="one-container">
+
+        `<div class="one-container">
     
     <div class= "second-container">
     
@@ -61,11 +61,11 @@ const createCards = listPokemon => {
             </div>
             </div>
             `)
-            return infoPokemon.join(" ")
-        }
+    return infoPokemon.join(" ")
+}
 
 
-let pokemonsToBeShown= []
+let pokemonsToBeShown = []
 //Botão Região kanto//
 btnKanto.addEventListener("click", function () {
     let result = filterByRegion(everyPokemon, "kanto")
@@ -86,23 +86,23 @@ btnJohto.addEventListener("click", function () {
 btnWorld.addEventListener("click", function () {
     let infoPokemons = createCards(everyPokemon)
     cards.innerHTML = infoPokemons
-    pokemonsToBeShown= infoPokemons
+    pokemonsToBeShown = infoPokemons
 });
 
 //Filtro por tipo//
-let resultType= []
+let resultType = []
 
-select.addEventListener("change", function(){
+select.addEventListener("change", function () {
     let type = select.value
-    resultType = filterByType(pokemonsToBeShown,type)
+    resultType = filterByType(pokemonsToBeShown, type)
     let pokeType = createCards(resultType)
     cards.innerHTML = pokeType;
-    console.log (type);
+    console.log(type);
 
 });
 
 //Ordernar//
-selectOrder.addEventListener("change", function(){
+selectOrder.addEventListener("change", function () {
     let maxCp = selectOrder.value
     console.log(maxCp)
     let result = sortBy(everyPokemon, maxCp)
@@ -114,8 +114,8 @@ selectOrder.addEventListener("change", function(){
 //Porcentagem por tipo//
 console.log(resultType.length)
 let num = 251
-let typePercentage = calcPercentage (num, resultType.length)
+let typePercentage = calcPercentage(num, resultType.length)
 statsType.innerHTML = typePercentage + "% dos Pokémon são desse tipo!"
 
-   
+
 
