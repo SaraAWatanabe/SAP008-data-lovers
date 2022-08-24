@@ -1,6 +1,6 @@
 import { filterByRegion } from "./data.js";
 import { filterByType } from "./data.js";
-import { sortBy } from "./data.js";
+//import { sortBy } from "./data.js";
 import data from "./data/pokemon/pokemon.js";
 
 //.log(example, data);
@@ -12,7 +12,7 @@ const btnJohto = document.getElementById("button-johto");
 const cards = document.getElementById("cards");
 const everyPokemon = data.pokemon;
 const select = document.getElementById("selectType");
-let selectOrder = document.getElementById("select-cp");
+//let selectOrder = document.getElementById("select-cp");
 
 
 //templates dos cards//
@@ -69,7 +69,7 @@ btnKanto.addEventListener("click", function () {
     let infoKanto = createCards(result)
     cards.innerHTML = infoKanto
     pokemonsToBeShown = result
-    console.log(infoKanto)
+    //console.log(infoKanto)
 });
 
 //Botão da Região Johto//
@@ -78,7 +78,7 @@ btnJohto.addEventListener("click", function () {
     let infoJohto = createCards(result)
     cards.innerHTML = infoJohto;
     pokemonsToBeShown = result
-    console.log(infoJohto)
+    //console.log(infoJohto)
 });
 
 //Cards de todos os pokemon na tela//
@@ -94,17 +94,17 @@ select.addEventListener("change", function(){
     let result = filterByType(pokemonsToBeShown,type)
     let pokeType = createCards(result)
     cards.innerHTML = pokeType;
-    console.log (type);
+    //console.log (type);
 
 });
 
-selectOrder.addEventListener("change", function(){
-    let orderCpHp = selectOrder.value
-    console.log(orderCpHp)
-    let result = sortBy(everyPokemon, stats["max-cp"])
-    let pokeCpHp = createCards(result)
-    cards.innerHTML = pokeCpHp;
-    console.log(orderCpHp)
-    console.log(result)
-})
+//selectOrder.addEventListener("change", function(){
+    //let orderCpHp = selectOrder.value
+    //console.log(orderCpHp)
+    //let result = sortBy(everyPokemon, orderCpHp)
+    //let pokeCpHp = createCards(result)
+    //cards.innerHTML = pokeCpHp;
+    //console.log(orderCpHp)
+    //console.log(result)
+//})
 
