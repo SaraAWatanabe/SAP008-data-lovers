@@ -101,7 +101,7 @@ select.addEventListener("change", function () {
 
 });
 
-//Ordernar//
+//Ordernar pelo resultado recebido na tela//
 selectOrder.addEventListener("change", function () {
     let maxCp = selectOrder.value
     console.log(maxCp)
