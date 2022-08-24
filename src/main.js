@@ -86,7 +86,7 @@ btnJohto.addEventListener("click", function () {
 btnWorld.addEventListener("click", function () {
     let infoPokemons = createCards(everyPokemon)
     cards.innerHTML = infoPokemons
-    pokemonsToBeShown = infoPokemons
+    pokemonsToBeShown = everyPokemon
 });
 
 //Filtro por tipo//
@@ -105,7 +105,7 @@ select.addEventListener("change", function () {
 selectOrder.addEventListener("change", function () {
     let maxCp = selectOrder.value
     console.log(maxCp)
-    let result = sortBy(everyPokemon, maxCp)
+    let result = sortBy(pokemonsToBeShown, maxCp)
     let pokeCpHp = createCards(result)
     cards.innerHTML = pokeCpHp;
     console.log(result)
