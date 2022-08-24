@@ -1,6 +1,7 @@
-import { filterByRegion } from "./data.js";
+import {filterByRegion } from "./data.js";
 import { filterByType } from "./data.js";
 import { sortBy } from "./data.js";
+import { calcPercentage } from "./data.js";
 import data from "./data/pokemon/pokemon.js";
 
 //.log(example, data);
@@ -13,7 +14,7 @@ const cards = document.getElementById("cards");
 const everyPokemon = data.pokemon;
 const select = document.getElementById("selectType");
 let selectOrder = document.getElementById("select-cp");
-
+const statsType = document.getElementById("statsType")
 
 //templates dos cards//
 const createCards = listPokemon => {
@@ -64,13 +65,13 @@ const createCards = listPokemon => {
         }
 
 
+let pokemonsToBeShown= []
 //Botão Região kanto//
 btnKanto.addEventListener("click", function () {
     let result = filterByRegion(everyPokemon, "kanto")
     let infoKanto = createCards(result)
     cards.innerHTML = infoKanto
     pokemonsToBeShown = result
-    //console.log(infoKanto)
 });
 
 //Botão da Região Johto//
@@ -79,7 +80,6 @@ btnJohto.addEventListener("click", function () {
     let infoJohto = createCards(result)
     cards.innerHTML = infoJohto;
     pokemonsToBeShown = result
-    //console.log(infoJohto)
 });
 
 //Cards de todos os pokemon na tela//
@@ -89,16 +89,19 @@ btnWorld.addEventListener("click", function () {
     pokemonsToBeShown= infoPokemons
 });
 
-let pokemonsToBeShown= []
+//Filtro por tipo//
+let resultType= []
+
 select.addEventListener("change", function(){
     let type = select.value
-    let result = filterByType(pokemonsToBeShown,type)
-    let pokeType = createCards(result)
+    resultType = filterByType(pokemonsToBeShown,type)
+    let pokeType = createCards(resultType)
     cards.innerHTML = pokeType;
-    //console.log (type);
+    console.log (type);
 
 });
 
+//Ordernar//
 selectOrder.addEventListener("change", function(){
     let maxCp = selectOrder.value
     console.log(maxCp)
@@ -107,4 +110,12 @@ selectOrder.addEventListener("change", function(){
     cards.innerHTML = pokeCpHp;
     console.log(result)
 })
+
+//Porcentagem por tipo//
+console.log(resultType.length)
+let num = 251
+let typePercentage = calcPercentage (num, resultType.length)
+statsType.innerHTML = typePercentage + "% dos Pokémon são desse tipo!"
+
+   
 
