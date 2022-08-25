@@ -1,5 +1,6 @@
 import { filterByRegion } from "../src/data.js";
 import { filterByType } from "../src/data.js";
+import { sortBy } from "./data.js";
 
 //teste filtro por região//
 const mockPokemons = [
@@ -7,13 +8,13 @@ const mockPokemons = [
     generation: {
       num: "generation i",
       name: "kanto",
-    }
+    },
   },
   {
     generation: {
       num: "generation ii",
       name: "johto",
-    }
+    },
   },
 ];
 
@@ -29,7 +30,7 @@ describe("filterByRegion", () => {
         generation: {
           num: "generation i",
           name: "kanto",
-        }
+        },
       },
     ];
 
@@ -43,31 +44,24 @@ describe("filterByRegion", () => {
         generation: {
           num: "generation ii",
           name: "johto",
-        }
+        },
       },
     ];
     expect(result).toEqual(expected);
-  })
+  });
 });
 
 //teste filtro por Type//
 
 const mockType = [
   {
-    type: [
-      "grass",
-      "poison",
-    ]
+    type: ["grass", "poison"],
   },
   {
-    type: [
-      "normal",
-    ]
+    type: ["normal"],
   },
   {
-    type: [
-      "fire"
-    ]
+    type: ["fire"],
   },
 ];
 
@@ -80,10 +74,7 @@ describe("filterByType", () => {
     const result = filterByType(mockType, "grass");
     const expected = [
       {
-        type: [
-          "grass",
-          "poison",
-        ]
+        type: ["grass", "poison"],
       },
     ];
 
@@ -94,9 +85,7 @@ describe("filterByType", () => {
     const result = filterByType(mockType, "fire");
     const expected = [
       {
-        type: [
-          "fire",
-        ]
+        type: ["fire"],
       },
     ];
 
@@ -107,9 +96,7 @@ describe("filterByType", () => {
     const result = filterByType(mockType, "normal");
     const expected = [
       {
-        type: [
-          "normal"
-        ]
+        type: ["normal"],
       },
     ];
 
@@ -117,8 +104,70 @@ describe("filterByType", () => {
   });
 });
 
-//teste para Ordenação//
+// Teste para SortBy
 
+const mockCP = [
+  {
+    stats: {
+      "max-cp": "1115",
+      "max-hp": "113",
+    },
+    stats: {
+      "max-cp": "2720",
+      "max-hp": "162",
+    },
+    stats: {
+      "max-cp": "3265",
+      "max-hp": "189",
+    },
+  },
+];
 
+describe("sortBy", () => {
+  it("is a function", () => {
+    expect(typeof sortBy).toBe("function");
+  });
 
+  it("returns the previous array, sorted by biggest max-cp", () => {
+    const result = sortBy(mockCP, "max-cp");
+    const expected = [
+      {
+        stats: {
+          "max-cp": "3265",
+          "max-hp": "189",
+        },
+        stats: {
+          "max-cp": "2720",
+          "max-hp": "162",
+        },
+        stats: {
+          "max-cp": "1115",
+          "max-hp": "113",
+        },
+      },
+    ];
+    expect(result).toEqual(expected);
+  });
 
+  it("returns the previous array, sorted by smallest max-cp", () => {
+    const result = sortBy(mockCP, "smallest max-cp")
+    const expected = [
+      {
+        stats: {
+          "max-cp": "1115",
+          "max-hp": "113",
+        },
+        stats: {
+          "max-cp": "2720",
+          "max-hp": "162",
+        },
+        stats: {
+          "max-cp": "3265",
+          "max-hp": "189",
+        },
+      },
+    ];
+
+    expect(result).toEqual(expected);
+  });
+});
