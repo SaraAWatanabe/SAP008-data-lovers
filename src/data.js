@@ -29,3 +29,4 @@ export const sortBy = (pokemons, value) => {
 
 
 
+lalala
