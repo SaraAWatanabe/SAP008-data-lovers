@@ -6,7 +6,7 @@ import data from "./data/pokemon/pokemon.js";
 
 //.log(example, data);
 
-//const btnMain = document.getElementById("button-main");
+const btnReset = document.getElementById("button-reset");
 const btnWorld = document.getElementById("button-world");
 const btnKanto = document.getElementById("button-kanto");
 const btnJohto = document.getElementById("button-johto");
@@ -15,6 +15,11 @@ const everyPokemon = data.pokemon;
 const select = document.getElementById("selectType");
 let selectOrder = document.getElementById("select-cp");
 const statsType = document.getElementById("statsType")
+
+//botão de reset
+btnReset.addEventListener("click",(event) => {
+    location.reload(event);
+})
 
 //templates dos cards//
 const createCards = listPokemon => {
