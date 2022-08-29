@@ -108,7 +108,7 @@ select.addEventListener("change", function () {
     const pokeType = createCards(resultType)
     cards.innerHTML = pokeType;
     sortpokemon = resultType
-    
+    //PROBLEMA: Usar os 251 como parâmetro, e não usar o array por região
     let typePercentage = calcPercentage(everyPokemon.length,resultType.length)
     statsType.innerHTML = typePercentage + "% dos Pokémon são desse tipo!"
 });
