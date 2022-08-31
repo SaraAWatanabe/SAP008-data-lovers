@@ -72,7 +72,7 @@ body{
 }
 
 #inf-pokemon{
-    font-family: Arial, Helvetica, sans-serif;
+/* já foi herdada do body "font-family: Arial, Helvetica, sans-serif;*/
     font-size: larger;
     text-align: justify;
     margin: 2%;
@@ -85,10 +85,12 @@ body{
 /*Estilização dos cards - output*/
 
 .one-container{
+/* Não faz diferença pro CSS!
     display: inline-flex;
     margin-left: 3%;
     margin-right: 0%;
     margin-top: 3%;
+*/
     position:static;
     width: 25%;
     height: 568px;
@@ -174,5 +176,49 @@ hr{
 
 /* botão de busca*/
 
+@media screen and (max-width:1024px) {
+    body{
+        background-color:red;
+        display: flex;
+        justify-content: center;
+        flex-flow: row;
+    }
+    #img-pokemon{
+        padding: 7%;
+    }
+    #inf-pokemon{
+        background-color: white;
+        padding: 5%;
+        border-radius: 10%;
+    }
+    .inf-world-pokemon{
+        display: block;
+    }
+    #input-search{
+        width: 250px ;
+    }
 
+    .one-container{
+        display: block;
+        margin: auto;
+        width: 50%;
+        height: 100%;
+        margin-bottom: 5%;
+        
+    }
+    #statsType{
+        font-size: 30px;
+    }
+    
+    .section-buttons{
+        display: flex;
+        justify-content: space-between;
+    }
 
+    #cards{
+        background-color: white;
+    }
+    
+    
+
+}
