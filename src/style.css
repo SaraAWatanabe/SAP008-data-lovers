@@ -38,6 +38,20 @@ main{
     background-color:#76CCE1;
     border: 2px dotted #FDDDE2 ;
 }
+.only-btn{
+    margin-left: 30%;
+    width: 100%;
+}
+.btn-input{
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    margin-top: 1%;
+}
+.input-label{
+    width: 100%;
+}
+
 /*filha tods selects*/
 .btn-select{
    margin-top: 1%; 
@@ -164,7 +178,7 @@ footer{
 
 @media screen and (max-width:1024px) {
     body{
-        background-color:red;
+    
         display: flex;
         justify-content: center;
         flex-flow: row;
