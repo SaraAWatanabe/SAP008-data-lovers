@@ -237,16 +237,12 @@ footer{
     }
 
     .selects{
-        height: 40px;
-        width: 200px;
-        font-size: large;
+        font-size: x-large;
         margin-left: 3%;
     }
 
     #input-search{
-        width: 300px;
-        height: 40px;
-        font-size: x-large;
+        font-size: xx-large;
     }
 
     #img-pokemon{
@@ -254,7 +250,7 @@ footer{
     }
 
     #inf-pokemon{
-        font-size: 225%; 
+        font-size: 2vw; 
     }
 
 
