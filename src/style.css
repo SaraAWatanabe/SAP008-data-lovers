@@ -4,7 +4,6 @@ body{
     background-color: rgba(216, 240, 239, 1);
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
     display: flex;
     justify-content: center;
 }
@@ -39,8 +38,8 @@ main{
     border: 2px dotted #FDDDE2 ;
 }
 .only-btn{
-    margin-left: 30%;
-    width: 100%;
+
+    margin-left: 10%;
 }
 .btn-input{
     display: flex;
@@ -49,7 +48,11 @@ main{
     margin-top: 1%;
 }
 .input-label{
-    width: 100%;
+
+    width: 40%;
+}
+#labelSearch{
+    font-size: 100%;
 }
 
 /*filha tods selects*/
@@ -77,8 +80,10 @@ main{
 /*filha input*/
 #input-search{
     width: 200px;
-    display: none;
     font-size: 20px;
+}
+.search{
+    display: none;
 }
 /*--------Introdução - main*/
 /*mãe*/
@@ -97,6 +102,15 @@ main{
     border:#76CCE1 solid 20px;
     margin: 5% 1% 5% 1%;
     border-radius: 10px;
+}
+
+#stats-type{
+    font-size: 150%;
+    margin-top: 2%;
+    margin-left: 15%;
+    font-family: system-ui;
+    background: #FDDDE2;
+    width: 70%;
 }
 /*Estilização dos cards - output*/
 .one-container{
@@ -139,12 +153,10 @@ main{
     text-align: center;
     margin: 3%;
     word-spacing: 10px;
-    font-size: small;
 }
 .image-pokemon{
-   
     width: 80%;
-    margin-left: 5%;
+    border-radius:5%;
     background-image: linear-gradient(to right,darkgreen, rgba(108, 141, 94, 1),rgb(119, 218, 119) );
 }
 .text-pokemon-stats{
@@ -177,25 +189,27 @@ footer{
 /* botão de busca*/
 
 @media screen and (max-width:1024px) {
-    body{
     
-        display: flex;
-        justify-content: center;
-        flex-flow: row;
-    }
     #img-pokemon{
         padding: 7%;
     }
-    #inf-pokemon{
-        background-color: white;
-        padding: 5%;
-        border-radius: 10%;
-    }
+    
     .inf-world-pokemon{
         display: block;
     }
+    .button{
+        font-size:xx-large;
+    }
+
     #input-search{
         width: 250px ;
+    }
+    .selects{
+        font-size:xx-large;
+
+    }
+    #labelSearch{
+        font-size: 150%;
     }
 
     .one-container{
@@ -208,17 +222,15 @@ footer{
     #statsType{
         font-size: 30px;
     }
-    
-    .section-buttons{
-        display: flex;
-        justify-content: space-between;
-    }
 
-    #cards{
-        background-color: white;
-    }
     
 } 
+@media screen and (min-width: 1024px) and (max-width: 1700px) {
+    .inf-world-pokemon{
+        justify-content: center;
+    }
+
+}
 
 /*telas acima de 1700px*/
 
@@ -268,7 +280,7 @@ footer{
     }
 
     #inf-pokemon{
-        font-size: 225%; 
+        font-size: 2vw; 
     }
 
 
