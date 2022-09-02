@@ -4,7 +4,6 @@ body{
     background-color: rgba(216, 240, 239, 1);
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
     display: flex;
     justify-content: center;
 }
@@ -36,27 +35,55 @@ main{
 /*mãe da nav*/
 .section-buttons {
     background-color:#76CCE1;
-    border: 2px dotted #FDDDE2 ; 
+    border: 2px dotted #FDDDE2 ;
 }
+.only-btn{
+
+    margin-left: 10%;
+}
+.btn-input{
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    margin-top: 1%;
+}
+.input-label{
+
+    width: 40%;
+}
+#labelSearch{
+    font-size: 100%;
+}
+
 /*filha tods selects*/
 .btn-select{
    margin-top: 1%; 
    display: none;
 }
-/*
+
+/*filha do bnt select e neta da nav*/
+
+.selects{
+    font-size: large;
+    margin-left: 3%;
+}
+
 /*filha só botões*/
 .button{
     cursor: pointer;
-    font-size: large;
+    font-size: 20px;
     background-color: white;
     border-radius: 10%;
-    max-height: fit-content;
-    min-width: fit-content;
     word-spacing:10px ;
+    margin-right: 2%;
 }
 /*filha input*/
 #input-search{
-    width: 200px ;
+    width: 200px;
+    font-size: 20px;
+}
+.search{
+    display: none;
 }
 /*--------Introdução - main*/
 /*mãe*/
@@ -75,6 +102,15 @@ main{
     border:#76CCE1 solid 20px;
     margin: 5% 1% 5% 1%;
     border-radius: 10px;
+}
+
+#stats-type{
+    font-size: 150%;
+    margin-top: 2%;
+    margin-left: 15%;
+    font-family: system-ui;
+    background: #FDDDE2;
+    width: 70%;
 }
 /*Estilização dos cards - output*/
 .one-container{
@@ -117,12 +153,10 @@ main{
     text-align: center;
     margin: 3%;
     word-spacing: 10px;
-    font-size: small;
 }
 .image-pokemon{
-   
     width: 80%;
-    margin-left: 5%;
+    border-radius:5%;
     background-image: linear-gradient(to right,darkgreen, rgba(108, 141, 94, 1),rgb(119, 218, 119) );
 }
 .text-pokemon-stats{
@@ -147,28 +181,35 @@ main{
 hr{
     margin: 0%;
 }
+
+footer{
+    margin-bottom: 1%;
+}
+
 /* botão de busca*/
 
 @media screen and (max-width:1024px) {
-    body{
-        background-color:red;
-        display: flex;
-        justify-content: center;
-        flex-flow: row;
-    }
+    
     #img-pokemon{
         padding: 7%;
     }
-    #inf-pokemon{
-        background-color: white;
-        padding: 5%;
-        border-radius: 10%;
-    }
+    
     .inf-world-pokemon{
         display: block;
     }
+    .button{
+        font-size:xx-large;
+    }
+
     #input-search{
         width: 250px ;
+    }
+    .selects{
+        font-size:xx-large;
+
+    }
+    #labelSearch{
+        font-size: 150%;
     }
 
     .one-container{
@@ -177,19 +218,77 @@ hr{
         width: 50%;
         height: 100%;
         margin-bottom: 5%;
-        
     }
     #statsType{
         font-size: 30px;
     }
+
     
-    .section-buttons{
-        display: flex;
-        justify-content: space-between;
+} 
+@media screen and (min-width: 1024px) and (max-width: 1700px) {
+    .inf-world-pokemon{
+        justify-content: center;
     }
 
-    #cards{
-        background-color: white;
+}
+
+/*telas acima de 1700px*/
+
+@media screen and (min-width: 1700px) {
+    body{
+        margin: 0%;
+    }
+
+    #section-logo{
+        height: 350px; 
+    }
+
+    #logo-pokemon {
+        margin-top: 1%;
+        height: 250px;
+        margin-bottom: 0%;
+    }
+
+    #logo-lovers{
+        height: 70px;
+        margin-right: 3%;
+    }
+
+    .section-buttons{
+        border:4px dotted #FDDDE2;
     }
     
+    .button{
+        font-size:xx-large;
+    }
+
+    .selects{
+        height: 40px;
+        width: 200px;
+        font-size: large;
+        margin-left: 3%;
+    }
+
+    #input-search{
+        width: 300px;
+        height: 40px;
+        font-size: x-large;
+    }
+
+    #img-pokemon{
+        width: 600%;
+    }
+
+    #inf-pokemon{
+        font-size: 2vw; 
+    }
+
+
+    #statsType{
+        font-size: 250%;
+        margin: 3%;
+        text-align: center;
+        color: rgb(41, 0, 128);
+    }
+
 }

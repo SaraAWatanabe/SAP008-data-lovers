@@ -20,22 +20,29 @@
         </div>
       </figure>
       <nav class="section-buttons">
-        <button type="button" class="button" id="button-reset" name="button-reset">
-          Reset
-        </button>
-        <button type="button" class="button" id="button-world" name="button-world">
-          World
-        </button>
-        <button type="button" class="button" id="button-kanto" name="button-kanto">
-          Kanto
-        </button>
-        <button type="button" class="button" id="button-johto" name="button-johto">
-          Johto
-        </button>
-        <input type="text" name="input-search" id="input-search" placeholder="ex: pikachu"/>
+        <div class="btn-input">
+          <div class="only-btn">
+            <button type="button" class="button" id="button-reset" name="button-reset">
+              Reset
+            </button>
+            <button type="button" class="button" id="button-world" name="button-world">
+              World
+            </button>
+            <button type="button" class="button" id="button-kanto" name="button-kanto">
+              Kanto
+            </button>
+            <button type="button" class="button" id="button-johto" name="button-johto">
+              Johto
+            </button>
+          </div>
+          <div class="input-label search">
+            <label  id="labelSearch">Search by name</label>
+            <input  type="text" name="input-search" id="input-search" placeholder="ex: pikachu"/>
+          </div>
+        </div>
         
         <div class="btn-select">
-          <select name="selectType" id="selectType">
+          <select name="selectType" id="selectType" class="selects">
             <option value="type" selected>Type</option>
             <option value="normal">normal</option>
             <option value="fire">fire</option>
@@ -56,7 +63,7 @@
             <option value="dark">dark</option>
             <option value="fairy">fairy</option>
           </select>
-          <select class="select-max-cp select" id="select-cp">
+          <select name="select-cp-hp" id="select-cp" class="selects">
             <option value="order" disabled selected>Order By </option>
               <option value="biggest-max-cp" id="biggest-cp">&#11014 Max CP </option>
               <option value="smallest-max-cp" id="smallest-cp">&#11015 Max CP </option>
@@ -79,8 +86,7 @@
           e aqui você pode conhecer os pokemons que vivem em duas delas Kanto e Johto.
         </aside>
       </article>
-      <!-- Campo de porcentagem -->
-      <p id="statsType"></p>
+      <p id="stats-type"></p>
       <output id="cards"> </output>
     </main>
     <footer>
