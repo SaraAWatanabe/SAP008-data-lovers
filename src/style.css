@@ -38,8 +38,8 @@ main{
     border: 2px dotted #FDDDE2 ;
 }
 .only-btn{
+
     margin-left: 10%;
-    width: 100%;
 }
 .btn-input{
     display: flex;
@@ -48,11 +48,13 @@ main{
     margin-top: 1%;
 }
 .input-label{
+
     width: 40%;
 }
 #labelSearch{
     font-size: 100%;
 }
+
 /*filha tods selects*/
 .btn-select{
    margin-top: 1%; 
@@ -187,11 +189,7 @@ footer{
 /* botão de busca*/
 
 @media screen and (max-width:1024px) {
-    body{
-        display: flex;
-        justify-content: center;
-        flex-flow: row;
-    }
+    
     #img-pokemon{
         padding: 7%;
     }
