@@ -36,20 +36,23 @@ main{
 .section-buttons {
     background-color:#76CCE1;
     border: 2px dotted #FDDDE2 ;
+    /* border: 2px solid black; */
 }
 .only-btn{
-
     margin-left: 10%;
+    /* border: 2px solid red; */
 }
 .btn-input{
     display: flex;
     justify-content: space-between;
     width: 100vw;
     margin-top: 1%;
+    /* border: 2px solid black; */
 }
 .input-label{
 
     width: 40%;
+    /* border: 2px solid red; */
 }
 #labelSearch{
     font-size: 100%;
@@ -96,12 +99,13 @@ main{
 /*filha*/
 #inf-pokemon{
 /* já foi herdada do body "font-family: Arial, Helvetica, sans-serif;*/
-    font-size: 20px;
+    font-size: 140%; /*alterei a fonte do principal para % assim alterou no meu sem precisar fazer outro media*/
     text-align: justify;
     background-color: #76CCE1;
     border:#76CCE1 solid 20px;
     margin: 5% 1% 5% 1%;
     border-radius: 10px;
+    padding: 1%; /*coloquei um padding para definir o tamanho do espaço para todos os lados*/ 
 }
 
 #stats-type{
