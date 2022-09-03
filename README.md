@@ -69,7 +69,8 @@ História de usuário 5: Eu como usuária gostaria de acessar um site/aplicativo
 #### Protótipo de baixa fidelidade
 
 #### Protótipo de alta fidelidade
-![protótipo](https://github.com/SaraAWatanabe/SAP008-data-lovers/blob/13212a260b729a6772ea6fe4f8385b718fe19861/prot%C3%B3tipo.png)
+![Desktop](prot%C3%B3tipo.png)
+![Mobile](prot%C3%B3tipo2.png)
 
 
 

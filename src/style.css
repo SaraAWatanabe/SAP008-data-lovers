@@ -92,6 +92,7 @@ main{
     border:#76CCE1 solid 20px;
     margin: 5% 1% 5% 1%;
     border-radius: 10px;
+    padding: 2%;
 }
 
 #stats-type{
