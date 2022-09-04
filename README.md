@@ -69,6 +69,25 @@ História de usuário 5: Eu como usuária gostaria de acessar um site/aplicativo
 #### Protótipo de baixa fidelidade
 
 #### Protótipo de alta fidelidade
+![Desktop](prot%C3%B3tipo.png)
+![Mobile](prot%C3%B3tipo2.png)
+
+## 5. Funcionalidades da interface
+
+A interface permite ao usuário:
+
+* Visualizar  todos os cards com informações sobre os 251 Pokémon, clicando no 
+botão **World**.
+* Filtrar cards escolhendo sua região clicando nos botões **Kanto** ou **Johto**.
+* Ao visualizar os cards, a interface permite filtrar por tipo e ordenar por (CP e HP).
+* Visualizar estatísticas da quantidade de pokémon de cada tipo.
+* Localizar informações de um pokémon específico, buscando pelo seu nome.
+
+## 1. Etapas de produção
+
+O projeto foi desenvolvido ao longo de 5 sprints de trabalho, totalizando aproximadamente 5 semanas.
+
+Optamos por uma planning baseada em baby steps, com pequenas metas diária, dividindo e adquirindo o máximo de conhecimento em dupla.
 
 
 
