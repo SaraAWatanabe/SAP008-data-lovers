@@ -87,7 +87,9 @@ botão **World**.
 
 O projeto foi desenvolvido ao longo de 5 sprints de trabalho, totalizando aproximadamente 5 semanas.
 
-Optamos por uma planning baseada em baby steps, com pequenas metas diária, dividindo e adquirindo o máximo de conhecimento em dupla.
+Primeiro definimos qual seria o objetivo da aplicação web nos baseando nas histórias de usuários, depois definimos um protótipo de baixa fidelidade, e definimos nosso planejamento baseado em baby steps, quebrando nossos objetivos em pequenas metas diárias, dividindo e adquirindo o máximo de conhecimento em dupla.
+
+Usamos as ferramentas: notion para definição da planning e Figma para definição do protótipo de baixa a alta fidelidade.
 
 
 
