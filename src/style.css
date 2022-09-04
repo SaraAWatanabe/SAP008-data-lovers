@@ -34,8 +34,8 @@ main{
     background-color:#76CCE1;
     border: 2px dotted #FDDDE2 ;
 }
-.only-btn{
 
+.only-btn{
     margin-left: 10%;
     width: 100%;
 }
@@ -44,10 +44,12 @@ main{
     justify-content: space-between;
     width: 100vw;
     margin-top: 1%;
+    /* border: 2px solid black; */
 }
 .input-label{
 
     width: 40%;
+    /* border: 2px solid red; */
 }
 #labelSearch{
     font-size: 100%;
@@ -212,6 +214,8 @@ footer{
     #statsType{
         font-size: 30px;
     }
+
+
 
     
 } 
