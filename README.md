@@ -66,9 +66,8 @@ História de usuário 5: Eu como usuária gostaria de acessar um site/aplicativo
 
 ### Desenho de interface do usuário
 
-#### Protótipo de baixa fidelidade
-
 #### Protótipo de alta fidelidade
+Foram feitos dois protótipos, para desktop e mobile, no Figma.
 ![Desktop](prot%C3%B3tipo.png)
 ![Mobile](prot%C3%B3tipo2.png)
 
@@ -83,7 +82,7 @@ botão **World**.
 * Visualizar estatísticas da quantidade de pokémon de cada tipo.
 * Localizar informações de um pokémon específico, buscando pelo seu nome.
 
-## 1. Etapas de produção
+## 6. Etapas de produção
 
 O projeto foi desenvolvido ao longo de 5 sprints de trabalho, totalizando aproximadamente 5 semanas.
 
