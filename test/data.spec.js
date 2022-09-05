@@ -4,7 +4,6 @@ import { sortBy } from "../src/data.js";
 import { calcPercentage } from "../src/data.js";
 import { filterSearch } from "../src/data.js";
 
-//teste filtro por região//
 const mockPokemons = [
   {
     generation: {
@@ -52,8 +51,6 @@ describe("filterByRegion", () => {
     expect(result).toEqual(expected);
   });
 });
-
-//teste filtro por Type//
 
 const mockType = [
   {
@@ -106,7 +103,6 @@ describe("filterByType", () => {
   });
 });
 
-// Teste para SortBy//
 const mockCP = [
   {
     stats: {
@@ -127,11 +123,11 @@ const mockCP = [
     },
   },
   {
-    stats:{
+    stats: {
       "max-cp": "1115",
-      "max-hp": "113"
+      "max-hp": "113",
     },
-  }
+  },
 ];
 
 describe("sortBy", () => {
@@ -160,25 +156,24 @@ describe("sortBy", () => {
           "max-hp": "113",
         },
       },
-      { 
+      {
         stats: {
           "max-cp": "1115",
           "max-hp": "113",
         },
-
       },
     ];
     expect(result).toEqual(expected);
   });
-  //QUando não tiver o que ordenar (mesmo valor ou valor não esperado)
+
   it("returns the same array, unordered, when the second parameter is invalid ", () => {
     const result = sortBy(mockCP, " ");
-    
+
     expect(result).toEqual(mockCP);
   });
 
   it("returns the previous array, sorted by smallest max-cp", () => {
-    const result = sortBy(mockCP, "smallest-max-cp")
+    const result = sortBy(mockCP, "smallest-max-cp");
     const expected = [
       {
         stats: {
@@ -187,10 +182,10 @@ describe("sortBy", () => {
         },
       },
       {
-        stats:{
+        stats: {
           "max-cp": "1115",
           "max-hp": "113",
-        } 
+        },
       },
       {
         stats: {
@@ -208,8 +203,7 @@ describe("sortBy", () => {
 
     expect(result).toEqual(expected);
   });
-    
-  
+
   it("returns the previous array, sorted by biggest max-hp", () => {
     const result = sortBy(mockCP, "biggest-max-hp");
     const expected = [
@@ -232,18 +226,18 @@ describe("sortBy", () => {
         },
       },
       {
-        stats:{
+        stats: {
           "max-cp": "1115",
-          "max-hp": "113"
+          "max-hp": "113",
         },
       },
-   ];
+    ];
 
     expect(result).toEqual(expected);
   });
-    
+
   it("returns the previous array, sorted by smallest max-hp", () => {
-    const result = sortBy(mockCP, "smallest-max-hp")
+    const result = sortBy(mockCP, "smallest-max-hp");
     const expected = [
       {
         stats: {
@@ -252,9 +246,9 @@ describe("sortBy", () => {
         },
       },
       {
-        stats:{
+        stats: {
           "max-cp": "1115",
-          "max-hp": "113"
+          "max-hp": "113",
         },
       },
       {
@@ -273,11 +267,7 @@ describe("sortBy", () => {
 
     expect(result).toEqual(expected);
   });
-
-    
-
 });
-
 
 const mockEveryPokemon = [
   {
@@ -297,22 +287,20 @@ const mockEveryPokemon = [
   },
   {
     type: ["grass"],
-  }, 
+  },
   {
     type: ["fire"],
   },
-   {
-    type: ["poison"],
-  }, 
   {
-    type: ["dark","poison"],
+    type: ["poison"],
+  },
+  {
+    type: ["dark", "poison"],
   },
   {
     type: ["flying"],
   },
-
 ];
-
 
 const mockTypePercentage = [
   {
@@ -323,8 +311,7 @@ const mockTypePercentage = [
   },
   {
     type: ["grass"],
-  }
-
+  },
 ];
 
 const mockTypePercentage1 = [
@@ -333,8 +320,7 @@ const mockTypePercentage1 = [
   },
   {
     type: ["grass", "poison"],
-  }
-
+  },
 ];
 
 describe("calcPercentage", () => {
@@ -343,19 +329,24 @@ describe("calcPercentage", () => {
   });
 
   it("returns a percentage of pokemon according to the chosen type", () => {
-    const result = calcPercentage(mockEveryPokemon.length, mockTypePercentage.length);
-    const expected = 30
+    const result = calcPercentage(
+      mockEveryPokemon.length,
+      mockTypePercentage.length
+    );
+    const expected = 30;
 
     expect(result).toEqual(expected);
   });
 
   it("returns a percentage of pokemon according to the chosen type", () => {
-    const result = calcPercentage(mockEveryPokemon.length, mockTypePercentage1.length);
-    const expected = 20
+    const result = calcPercentage(
+      mockEveryPokemon.length,
+      mockTypePercentage1.length
+    );
+    const expected = 20;
 
     expect(result).toEqual(expected);
   });
-
 });
 
 const mockNames = [
@@ -373,7 +364,7 @@ const mockNames = [
   },
   {
     name: "articuno",
-  }
+  },
 ];
 
 describe("filterSearch", () => {
@@ -392,10 +383,9 @@ describe("filterSearch", () => {
       },
       {
         name: "rapidash",
-      }
+      },
     ];
 
     expect(result).toEqual(expected);
   });
-
 });
